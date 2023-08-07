@@ -53,7 +53,7 @@ const AskPropertyType = () => {
         />
         <MobileRectangleOption
           img="./assets/mobile/appartment2.svg"
-          text="Un apprtement"
+          text="Un appartement"
           onClick={() => {
             setPropertyType("appartement");
             localStorage.setItem("propertyType", "appartement");
