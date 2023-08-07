@@ -71,9 +71,10 @@ const AskAtticInsulation = () => {
   // Define a mapping object for the image filenames when both solarOption and heatInstall are present
   const imageMappingsAllThree = {
     "1-1-1": "SolarOption1PACcomblesPerdus.png",
-    "1-1-2": "SolarOption1PoêleGranulésIsoComblesAménagés.png",
+    "1-1-2": "SolarOption1PoêleGranuléscomblesPerdus.png",
     "1-2-1": "SolarOption1PACIsoComblesAménagés.png",
-    "1-2-2": "SolarOption1PoêleGranuléscomblesPerdus.png",
+    "1-2-2": "SolarOption1PoêleGranulésIsoComblesAménagés.png",
+
     "2-1-1": "SolarOption2PACcomblesPerdus.png",
     "2-1-2": "SolarOption2PoêleGranuléscomblesPerdus.png",
     "2-2-1": "SolarOption2PACIsoComblesAménagés.png",
