@@ -11,7 +11,7 @@ import ContinueButton from "../components/ContinueButton";
 const AskAccomodationAffectee = () => {
   // const [accomodationAffectee, setAccomodationAffectee] = React.useState('');
   const [accomodationAffectee, setAccomodationAffectee] = React.useState(
-    localStorage.getItem("accomodationAffectee") || "",
+    localStorage.getItem("accomodationAffectee") || ""
   );
   const isMobile = useCheckMobileScreen();
 
@@ -40,7 +40,7 @@ const AskAccomodationAffectee = () => {
         <div className="flex flex-col gap-5 mt-12">
           <MobileRectangleOption
             img="./assets/mobile/affectee1.png"
-            text="Moins de 2 ans "
+            text="Propriétéaire occupant"
             onClick={() => {
               setAccomodationAffectee("1");
               localStorage.setItem("accomodationAffectee", "1");
