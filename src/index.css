@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Nunito&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f7f9ff;
+  font-family: "Urbanist", sans-serif;
+}
+
+.heading {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  letter-spacing: -0.01em;
+
+  color: #323438;
+}
+
+.button {
+  padding: 8px 24px;
+  width: 221px;
+  height: 51px;
+
+  background: linear-gradient(180deg, #28c985 0%, #18808a 100%);
+  border-radius: 10px;
+
+  font-family: "Fira Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+
+  margin-bottom: 100px;
+}
+
+.highlight-text {
+  background: linear-gradient(90deg, #28c985 0%, #18808a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.selected-arrow {
+  background: linear-gradient(121.06deg, #28c985 13.09%, #18808a 93.36%);
+  border-radius: 14.9625px;
+}
+
+.item {
+  padding-top: 12px;
+  display: flex;
+  background-color: #ffffff;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 206px;
+  height: 214px;
+  border-radius: 42px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #c8ccd8;
+}
+
+.mobileItem {
+  padding-top: 12px;
+  display: flex;
+  background-color: #ffffff;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c8ccd8;
+}
+
+.selected {
+  border-width: 2px;
+  border-color: #18808a;
+
+  box-shadow: 0px 3px 3px 0px #00000040;
+}
+
+.selected > p {
+  color: #18808a;
+}
+
+.mobileSelected {
+  border-color: #18808a;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.mobileSelected > p {
+  color: #18808a;
+}
+
+/* .text-item {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  color: #000;
+  font-size: 24px;
+} */
+
+.nunito {
+  font-family: "Nunito", sans-serif;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+}
+
+.text-calender {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.heading2 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+
+  color: #323438;
+}
+
+label {
+  width: 178px;
+  height: 30px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+
+  color: #323438;
+}
+
+.lineargradient {
+  background: linear-gradient(180deg, #28c985 0%, #18808a 100%);
+}
+
+.input {
+  width: 668px;
+  height: 80px;
+  outline: none;
+  border-radius: 20px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 58px;
+  color: #a9a9a9;
+
+  border-width: 2px;
+  border-color: #28c985;
+  border-style: solid;
+  caret-color: #000;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.gradientColor {
+  background: linear-gradient(90deg, #27ad70 0%, #6dc54a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  mix-blend-mode: normal;
+}
