@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import DoubleNumberInput from "../components/DoubleNumberInput";
 import MobileLayout from "../layouts/MobileLayout";
 import NumberInput from "../components/NumberInput";
+import { sendData } from "./EndScreen";
 
 const AskTelephone = () => {
   const isMobile = useCheckMobileScreen();
@@ -15,10 +16,10 @@ const AskTelephone = () => {
   // const [mailAddress, setmailAddress] = React.useState('');
 
   const [telephone, settelephone] = React.useState(
-    localStorage.getItem("telephone") || "",
+    localStorage.getItem("telephone") || ""
   );
   const [mailAddress, setmailAddress] = React.useState(
-    localStorage.getItem("mailAddress") || "",
+    localStorage.getItem("mailAddress") || ""
   );
 
   const onSubmit = (e) => {
@@ -26,6 +27,7 @@ const AskTelephone = () => {
     if (telephone !== "" && mailAddress !== "") {
       localStorage.setItem("telephone", telephone);
       localStorage.setItem("mailAddress", mailAddress);
+      sendData();
       navigate("/accomodationaffectee");
     }
   };

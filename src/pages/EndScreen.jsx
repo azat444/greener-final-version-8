@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import ContinueButton from "../components/ContinueButton";
 import Navbar from "../components/Navbar";
+import { Item } from "./Eligible";
 import { Arrow } from "./AskPropertyType";
 import useCheckMobileScreen from "../util/useCheckMobileScreen";
 import MobileLayout from "../layouts/MobileLayout";
@@ -143,7 +144,7 @@ const PhoneIcon = () => (
   </svg>
 );
 
-const sendData = () => {
+export const sendData = () => {
   const firstName = localStorage.getItem("firstName") || "";
   const lastName = localStorage.getItem("lastName") || "";
   const telephone = localStorage.getItem("telephone") || "";
@@ -747,6 +748,37 @@ const EndScreen = () => {
       <div className="flex flex-col h-screen ">
         <Navbar one two three four />
         <div className="flex h-full">
+          {/* LEFT */}
+          <div className="w-[30%] h-full flex items-center justify-center">
+            <div className="bg-[#FCFFFE] min-h-[90%] flex flex-col gap-4 p-5 m-5 items-center justify-center w-[90%] rounded-2xl shadow-leftCard">
+              <div className="bg-[#F7F9FC] w-[80%] p-4 flex items-center justify-center gap-6 flex-col">
+                {/* LOGO */}
+                <div className="flex flex-col">
+                  <img src="./assets/logo.png" alt="HappyFace" className="" />
+                </div>
+
+                {/* CENTER ITEM */}
+                <div className="flex flex-col items-center w-[50%] gap-6">
+                  <p className="font-bold text-[#2D3142] text-lg text-center">
+                    Estimation des aides pour votre projet
+                  </p>
+                  <div className="flex items-center justify-center gap-4">
+                    <floorInsulationIcon />
+                    <p className="nunito font-bold text-[#2D3142]">
+                      Isolation floorInsulation
+                    </p>
+                  </div>
+                </div>
+
+                {/* BOTTOM ITEMS */}
+                <div className="flex flex-col items-center w-full gap-6">
+                  <Item title="MaprimeRenov’" value="4 000 €" />
+                  <Item title="Montant CEE" value="4 000 €" />
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* RIGHT */}
           <div className="flex flex-col flex-1 w-full gap-4 px-16 pt-6 pb-4 ">
             <button

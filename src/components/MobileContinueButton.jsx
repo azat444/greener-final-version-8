@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const MobileContinueButton = ({ disabled, message = 'CONTINUER' }) => {
+const MobileContinueButton = ({ disabled, message = "CONTINUER" }) => {
   return (
     <div
       className={`border ${
-        disabled ? 'border-[#C8CCD8]' : 'border-[#18808A] hover:shadow-lg'
+        disabled ? "border-[#C8CCD8]" : "border-[#18808A] hover:shadow-lg"
       } rounded-[40px] p-1 bg-[#FCFFFE] transition-all `}
     >
       <button

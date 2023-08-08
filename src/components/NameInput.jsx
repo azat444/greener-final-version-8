@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const NameInput = ({
   state,
@@ -28,10 +28,10 @@ const NameInput = ({
 
     <form className="h-[85vh] flex flex-col gap-4 xl:gap-24 items-center">
       <div className="flex items-center">
-        <div className={`absolute ${isMobile ? 'top-24 left-4' : 'left-28'}`}>
+        <div className={`absolute ${isMobile ? "top-24 left-4" : "left-28"}`}>
           <Link to={backNav}>
             <img
-              className={isMobile && 'w-7 h-7'}
+              className={isMobile && "w-7 h-7"}
               src="./assets/arrow.svg"
               alt="Back"
             />
@@ -41,8 +41,8 @@ const NameInput = ({
           <h1
             className={
               isMobile
-                ? 'inter text-2xl text-center font-bold leading-7 px-6 py-4'
-                : 'mx-auto heading flex-1 text-center lg:text-5xl px-24'
+                ? "inter text-2xl text-center font-bold leading-7 px-6 py-4"
+                : "mx-auto heading flex-1 text-center lg:text-5xl px-24"
             }
           >
             {text1}
@@ -54,14 +54,14 @@ const NameInput = ({
 
       <div
         className={`flex-1 justify-center flex flex-col ${
-          isMobile ? 'gap-4' : 'gap-8'
+          isMobile ? "gap-4" : "gap-8"
         } items-center`}
       >
-        <label className={`${isMobile ? 'text-sm' : ''}`}>{label}</label>
+        <label className={`${isMobile ? "text-sm" : ""}`}>{label}</label>
         <input
           autoFocus
           className={`input bg-transparent ${
-            isMobile ? '!w-80 !h-16 !text-xl !p-3' : ''
+            isMobile ? "!w-80 !h-16 !text-xl !p-3" : ""
           }`}
           type="text"
           value={state}
@@ -70,7 +70,7 @@ const NameInput = ({
       </div>
 
       <Link to={nextNav}>
-        <button type="submit" disabled={state === ''} className="mt-12 button">
+        <button type="submit" disabled={state === ""} className="mt-12 button">
           CONTINUER
         </button>
       </Link>

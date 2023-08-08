@@ -10,7 +10,7 @@ const AskElectricBill = () => {
   const isMobile = useCheckMobileScreen();
   // const [electricBill, setElectricBill] = React.useState('');
   const [electricBill, setElectricBill] = React.useState(
-    localStorage.getItem("electricBill") || "",
+    localStorage.getItem("electricBill") || ""
   );
   const navigate = useNavigate();
 

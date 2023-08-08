@@ -1,5 +1,5 @@
-import React from 'react';
-import ContinueButton from './ContinueButton';
+import React from "react";
+import ContinueButton from "./ContinueButton";
 
 const NumberInput = ({
   state,
@@ -22,7 +22,7 @@ const NumberInput = ({
         <div className="w-full flex items-center bg-[#FCFFFE] h-12 rounded-xl border  px-3 text-base leading-7">
           <input
             autoFocus
-            type={type ? type : 'number'}
+            type={type ? type : "number"}
             className="flex-1 h-full bg-[#FCFFFE] rounded-xl outline-none border-none text-[#1E1D4C] placeholder:text-[#C8CCD8]"
             value={state}
             placeholder={placeholder}
@@ -54,7 +54,7 @@ const NumberInput = ({
         <div className="w-full flex items-center bg-[#FCFFFE] h-12 rounded-xl border  px-3 text-base leading-7">
           <input
             autoFocus
-            type={type ? type : 'number'}
+            type={type ? type : "number"}
             className="flex-1 h-full bg-[#FCFFFE] rounded-xl outline-none border-none text-[#1E1D4C] placeholder:text-[#C8CCD8]"
             value={state}
             placeholder={placeholder}
