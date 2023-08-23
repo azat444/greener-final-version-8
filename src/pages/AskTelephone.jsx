@@ -89,7 +89,10 @@ const AskTelephone = () => {
               ></div>
             </div>
 
-            <section className="flex flex-col items-center flex-1 gap-12 py-12">
+            <form
+              onSubmit={onSubmit}
+              className="flex flex-col items-center flex-1 gap-12 py-12"
+            >
               <h1 className="font-semibold text-2xl text-[#1E1D4C]">
                 Comment vous appelez-vous ?
               </h1>
@@ -103,13 +106,12 @@ const AskTelephone = () => {
                   type2="email"
                   changeHandler1={(e) => settelephone(e.target.value)}
                   changeHandler2={(e) => setmailAddress(e.target.value)}
-                  onSubmit={onSubmit}
                   nextNav="/electricbill"
                   label1={"Téléphone"}
                   label2={"Adresse mail"}
                 />
               </div>
-            </section>
+            </form>
           </div>
         </div>
       </div>

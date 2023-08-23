@@ -15,10 +15,10 @@ const AskName = () => {
   // const [lastName, setLastname] = React.useState('');
 
   const [firstName, setfirstName] = React.useState(
-    localStorage.getItem("firstName") || "",
+    localStorage.getItem("firstName") || ""
   );
   const [lastName, setLastname] = React.useState(
-    localStorage.getItem("lastName") || "",
+    localStorage.getItem("lastName") || ""
   );
 
   const onSubmit = (e) => {
@@ -87,7 +87,10 @@ const AskName = () => {
               ></div>
             </div>
 
-            <section className="flex flex-col items-center flex-1 gap-12 py-12">
+            <form
+              onSubmit={onSubmit}
+              className="flex flex-col items-center flex-1 gap-12 py-12"
+            >
               <h1 className="font-semibold text-2xl text-[#1E1D4C]">
                 Comment vous appelez-vous ?
               </h1>
@@ -101,13 +104,12 @@ const AskName = () => {
                   type2="string"
                   changeHandler1={(e) => setfirstName(e.target.value)}
                   changeHandler2={(e) => setLastname(e.target.value)}
-                  onSubmit={onSubmit}
                   nextNav="/electricbill"
                   label1={"Prénom"}
                   label2={"Nom"}
                 />
               </div>
-            </section>
+            </form>
           </div>
         </div>
       </div>

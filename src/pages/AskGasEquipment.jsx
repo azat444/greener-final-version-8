@@ -12,7 +12,7 @@ const AskGasEquipment = () => {
   const isMobile = useCheckMobileScreen();
   // const [gasEquipment, setGasEquipment] = React.useState('');
   const [gasEquipment, setGasEquipment] = React.useState(
-    localStorage.getItem("gasEquipment") || "",
+    localStorage.getItem("gasEquipment") || ""
   );
 
   const setSelected = (number) => {
@@ -87,11 +87,8 @@ const AskGasEquipment = () => {
           </div>
 
           {/* RIGHT */}
-          <div className="flex flex-col flex-1 w-full gap-4 px-16 pt-6 pb-4 ">
-            <button
-              onClick={() => navigate(-1)}
-              className="flex items-center gap-3"
-            >
+          <div className="flex flex-col flex-1 w-full gap-4 px-16">
+            <button onClick={() => navigate(-1)} className="flex items-center">
               <Arrow />
               <p className="text-xl text-[#1E1D4C] font-medium ">Retour</p>
             </button>
@@ -104,9 +101,9 @@ const AskGasEquipment = () => {
 
             <form
               onSubmit={submitHandler}
-              className="flex flex-col items-center gap-6"
+              className="flex flex-col items-center"
             >
-              <h1 className="font-semibold text-2xl text-[#1E1D4C] py-6">
+              <h1 className="font-semibold text-2xl text-[#1E1D4C]">
                 Quel type d'équipement au gaz est installé ?
               </h1>
 
@@ -168,7 +165,7 @@ const AskGasEquipment = () => {
                   // size={isMobile ? 'w-20 h-14' : 'w-20 h-20'}
                 />
               </div>
-              <div className="my-12">
+              <div className="">
                 <ContinueButton state1={gasEquipment} state2="NILL" />
               </div>
             </form>

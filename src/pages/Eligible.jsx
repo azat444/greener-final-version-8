@@ -47,11 +47,6 @@ const Eligible = () => {
             <img src="./assets/mobile/home.png" alt="HappyFace" className="" />
           </div>
 
-          <div className="flex flex-col items-center w-full">
-            <Item title="Montant CEE" value="4 000 €" isMobile={isMobile} />
-            <Item title="MaprimeRenov’" value="4 000 €" isMobile={isMobile} />
-          </div>
-
           <div className="flex flex-col items-center justify-center">
             <p className="text-lg font-bold text-[#333333]">
               Total aides disponibles
@@ -101,15 +96,6 @@ const Eligible = () => {
                     Isolation garage
                   </p>
                 </div>
-              </div>
-
-              {/* BOTTOM ITEMS */}
-              <div className="flex flex-col items-center w-full">
-                <Item title="MaprimeRenov’" value="4 000 €" />
-                <Item title="Montant CEE" value="4 000 €" />
-                <Item title="Montant du chantier" value="4 000 €" />
-                <Item title="Aides avec reste à payer" value="4 000 €" />
-                <Item title="Montant mensuel" value="4 000 €" borderBottom />
               </div>
             </div>
           </div>

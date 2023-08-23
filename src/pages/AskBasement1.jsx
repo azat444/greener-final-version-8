@@ -1,12 +1,12 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import useCheckMobileScreen from '../util/useCheckMobileScreen';
-import { Arrow } from './AskPropertyType';
-import Navbar from '../components/Navbar';
-import DoubleNumberInput from '../components/DoubleNumberInput';
-import { generateURLstring } from '../util/generateURLstring';
-import MobileLayout from '../layouts/MobileLayout';
-import NumberInput from '../components/NumberInput';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import useCheckMobileScreen from "../util/useCheckMobileScreen";
+import { Arrow } from "./AskPropertyType";
+import Navbar from "../components/Navbar";
+import DoubleNumberInput from "../components/DoubleNumberInput";
+import { generateURLstring } from "../util/generateURLstring";
+import MobileLayout from "../layouts/MobileLayout";
+import NumberInput from "../components/NumberInput";
 
 const AskBasement1 = () => {
   const isMobile = useCheckMobileScreen();
@@ -14,22 +14,22 @@ const AskBasement1 = () => {
 
   // const [area, setArea] = React.useState('');
   const [area, setArea] = React.useState(
-    localStorage.getItem('basementArea') || ''
+    localStorage.getItem("basementArea") || ""
   );
   // const [celingHeight, setCeilingHeight] = React.useState('');
   const [celingHeight, setCeilingHeight] = React.useState(
-    localStorage.getItem('ceilingHeight') || ''
+    localStorage.getItem("ceilingHeight") || ""
   );
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (area !== '' && celingHeight !== '') {
-      localStorage.setItem('basementArea', area);
-      localStorage.setItem('ceilingHeight', celingHeight);
+    if (area !== "" && celingHeight !== "") {
+      localStorage.setItem("basementArea", area);
+      localStorage.setItem("ceilingHeight", celingHeight);
       const url = generateURLstring();
 
       if (!url) {
-        navigate('/accomodationaffected');
+        navigate("/accomodationaffected");
       } else {
         navigate(url);
       }
@@ -38,18 +38,18 @@ const AskBasement1 = () => {
 
   const IDKHandler1 = () => {
     setArea(0);
-    localStorage.setItem('basementArea', 'NILL');
+    localStorage.setItem("basementArea", "NILL");
   };
 
   const IDKHandler2 = () => {
     setCeilingHeight(0);
-    localStorage.setItem('ceilingHeight', 'NILL');
+    localStorage.setItem("ceilingHeight", "NILL");
   };
 
   if (isMobile)
     return (
       <MobileLayout
-        disabled={area === '' || celingHeight === ''}
+        disabled={area === "" || celingHeight === ""}
         progress="50%"
         question="Quelle est la surface du garage à isoler?"
         onSubmit={onSubmit}
@@ -61,7 +61,7 @@ const AskBasement1 = () => {
             changeHandler={(e) => setArea(e.target.value)}
             IDKHandler={IDKHandler1}
             nextNav="/heatenergy"
-            label={'Surface en m²'}
+            label={"Surface en m²"}
             placeholder="Exemple: 60 €"
             unit="m2"
           />
@@ -71,7 +71,7 @@ const AskBasement1 = () => {
             changeHandler={(e) => setCeilingHeight(e.target.value)}
             IDKHandler={IDKHandler2}
             nextNav="/heatenergy"
-            label={'Hauteur sous Plafond '}
+            label={"Hauteur sous Plafond "}
             placeholder="Exemple: 1m80 "
             unit="m2"
           />
@@ -101,18 +101,19 @@ const AskBasement1 = () => {
             <div className="w-full flex items-center justify-start h-4 mb-4 bg-[#FCFFFE] rounded-full">
               <div
                 className="h-3 bg-[#8DD9DE] rounded-full m-1 shadow-bar"
-                style={{ width: '50%' }}
+                style={{ width: "50%" }}
               ></div>
             </div>
 
-            <section className="flex flex-col items-center flex-1 gap-12">
+            <form
+              onSubmit={onSubmit}
+              className="flex flex-col items-center flex-1 gap-12"
+            >
               <h1 className="font-semibold text-2xl text-[#1E1D4C]">
                 Quelle est la surface du garage à isoler?
               </h1>
 
               <div className="flex w-full py-6 gap-14">
-                {/* TODO  */}
-
                 <DoubleNumberInput
                   isMobile={isMobile}
                   state1={area}
@@ -121,19 +122,18 @@ const AskBasement1 = () => {
                   state2={celingHeight}
                   changeHandler1={(e) => setArea(e.target.value)}
                   changeHandler2={(e) => setCeilingHeight(e.target.value)}
-                  onSubmit={onSubmit}
                   IDKHandler1={IDKHandler1}
                   IDKHandler2={IDKHandler2}
                   nextNav="/electricbill"
-                  label1={'Surface en m2'}
-                  label2={'Hauteur sous plafond'}
+                  label1={"Surface en m2"}
+                  label2={"Hauteur sous plafond"}
                   placeholder1="Exemple: 60 m2"
                   placeholder2="Exemple: 1m80"
                   unit1="m2"
                   unit2=""
                 />
               </div>
-            </section>
+            </form>
           </div>
         </div>
       </div>

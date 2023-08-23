@@ -10,7 +10,7 @@ const AskRoofOrientation = () => {
   const isMobile = useCheckMobileScreen();
   // const [roofOrientation, setRoofOrientation] = React.useState('');
   const [roofOrientation, setRoofOrientation] = React.useState(
-    localStorage.getItem("roofOrientation") || "",
+    localStorage.getItem("roofOrientation") || ""
   );
 
   const setSelected = (number) => {
@@ -89,7 +89,7 @@ const AskRoofOrientation = () => {
           </div>
 
           {/* RIGHT */}
-          <div className="flex flex-col flex-1 w-full gap-4 px-16 pt-6 pb-4 ">
+          <div className="flex flex-col flex-1 w-full gap-4 px-16 pt-6">
             <button
               onClick={() => navigate(-1)}
               className="flex items-center gap-3"

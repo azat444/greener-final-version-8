@@ -1,10 +1,10 @@
-import React from 'react';
-import useCheckMobileScreen from '../util/useCheckMobileScreen';
-import Navbar from '../components/Navbar';
-import { useNavigate } from 'react-router-dom';
-import { Arrow } from './AskPropertyType';
-import MobileLayout from '../layouts/MobileLayout';
-import DoubleNumberInput from '../components/DoubleNumberInput';
+import React from "react";
+import useCheckMobileScreen from "../util/useCheckMobileScreen";
+import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
+import { Arrow } from "./AskPropertyType";
+import MobileLayout from "../layouts/MobileLayout";
+import DoubleNumberInput from "../components/DoubleNumberInput";
 
 const AskAccomodationAffected = () => {
   const isMobile = useCheckMobileScreen();
@@ -12,10 +12,10 @@ const AskAccomodationAffected = () => {
   // const [codePostal, setCodePostal] = React.useState('');
 
   const [accomodationAffected, setAccomodationAffected] = React.useState(
-    localStorage.getItem('accomodationAffected') || ''
+    localStorage.getItem("accomodationAffected") || ""
   );
   const [codePostal, setCodePostal] = React.useState(
-    localStorage.getItem('codePostal') || ''
+    localStorage.getItem("codePostal") || ""
   );
 
   const navigate = useNavigate();
@@ -29,22 +29,22 @@ const AskAccomodationAffected = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (accomodationAffected !== '' && codePostal !== '') {
-      localStorage.setItem('accomodationAffected', accomodationAffected);
-      localStorage.setItem('codePostal', codePostal);
+    if (accomodationAffected !== "" && codePostal !== "") {
+      localStorage.setItem("accomodationAffected", accomodationAffected);
+      localStorage.setItem("codePostal", codePostal);
 
-      navigate('/telephone');
+      navigate("/telephone");
     }
   };
 
   const IDKHandler1 = () => {
-    setAccomodationAffected('NILL');
-    localStorage.setItem('accomodationAffected', 'NILL');
+    setAccomodationAffected("NILL");
+    localStorage.setItem("accomodationAffected", "NILL");
   };
 
   const IDKHandler2 = () => {
-    setCodePostal('0');
-    localStorage.setItem('codePostal', '0');
+    setCodePostal("0");
+    localStorage.setItem("codePostal", "0");
   };
 
   if (isMobile)
@@ -65,10 +65,10 @@ const AskAccomodationAffected = () => {
             changeHandler1={changeHandler1}
             changeHandler2={changeHandler2}
             nextNav="/electricbill"
-            label1={'Adresse'}
-            label2={'Code Postal'}
-            placeholder1={'32 rue Garibaldi 94100 Saint maur des fossès'}
-            placeholder2={'75020'}
+            label1={"Adresse"}
+            label2={"Code Postal"}
+            placeholder1={"32 rue Garibaldi 94100 Saint maur des fossès"}
+            placeholder2={"75020"}
             IDKHandler1={IDKHandler1}
             IDKHandler2={IDKHandler2}
           />
@@ -98,11 +98,14 @@ const AskAccomodationAffected = () => {
             <div className="w-full flex items-center justify-start h-4 mb-4 bg-[#FCFFFE] rounded-full">
               <div
                 className="h-3 bg-[#8DD9DE] rounded-full m-1 shadow-bar"
-                style={{ width: '57%' }}
+                style={{ width: "57%" }}
               ></div>
             </div>
 
-            <section className="flex flex-col items-center flex-1 gap-12 py-16">
+            <form
+              onSubmit={onSubmit}
+              className="flex flex-col items-center flex-1 gap-12 py-16"
+            >
               <h1 className="font-semibold text-2xl text-[#1E1D4C]">
                 Où se situe le logement concerné par les travaux?
               </h1>
@@ -118,15 +121,15 @@ const AskAccomodationAffected = () => {
                   changeHandler2={changeHandler2}
                   onSubmit={onSubmit}
                   nextNav="/electricbill"
-                  label1={'Adresse'}
-                  label2={'Code Postal'}
-                  placeholder1={'32 rue Garibaldi 94100 Saint maur des fossès'}
-                  placeholder2={'75020'}
+                  label1={"Adresse"}
+                  label2={"Code Postal"}
+                  placeholder1={"32 rue Garibaldi 94100 Saint maur des fossès"}
+                  placeholder2={"75020"}
                   IDKHandler1={IDKHandler1}
                   IDKHandler2={IDKHandler2}
                 />
               </div>
-            </section>
+            </form>
           </div>
         </div>
       </div>

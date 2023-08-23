@@ -27,7 +27,7 @@ const AskHeatingEnergy = () => {
           4: false,
           5: false,
           6: false,
-        },
+        }
   );
 
   const setSelected = (number) => {
@@ -151,7 +151,7 @@ const AskHeatingEnergy = () => {
           </div>
 
           {/* RIGHT */}
-          <div className="flex flex-col flex-1 w-full gap-4 px-16 pt-6 pb-4 ">
+          <div className="flex flex-col flex-1 w-full">
             <button
               onClick={() => navigate(-1)}
               className="flex items-center gap-3"
@@ -170,7 +170,7 @@ const AskHeatingEnergy = () => {
               onSubmit={submitHandler}
               className="flex flex-col items-center flex-1 gap-4 justify-evenly"
             >
-              <h1 className="font-semibold text-2xl text-[#1E1D4C] py-6">
+              <h1 className="font-semibold text-2xl text-[#1E1D4C]">
                 Quelle est l’énergie de chauffage actuelle de votre logement ?
               </h1>
 
@@ -246,6 +246,7 @@ const AskHeatingEnergy = () => {
                     "Utilisation du charbon comme combustible. Fortes émissions de CO2 et impact environnemental négatif. "
                   }
                   // size={isMobile ? 'w-20 h-14' : 'w-28 h-20'}
+                  // the page won't change it needs to
                 />
               </div>
 

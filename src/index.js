@@ -49,61 +49,59 @@ import AskWorkStart from "./pages/AskWorkStart";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<AskPropertyType />} />
-        <Route path="/time" element={<AskContructionTime />} />
-        <Route path="/noteligible" element={<NotEligibleForRenovation />} />
-        <Route path="/area" element={<AskArea />} />
-        <Route path="/electricbill" element={<AskElectricBill />} />
-        <Route path="/electricbillshare" element={<AskElectricBillShare />} />
-        <Route path="/heatenergy" element={<AskHeatingEnergy />} />
-        <Route path="/oilequipment" element={<AskOilEquipment />} />
-        <Route path="/fuelbill" element={<AskFuelBill />} />
-        <Route path="/woodbill" element={<AskWoodBill />} />
-        <Route path="/coalbill" element={<AskCoalBill />} />
-        <Route path="/gasbill" element={<AskgasBill />} />
-        <Route path="/goals" element={<AskGoals />} />
-        <Route path="/isolate" element={<AskIsolate />} />
-        <Route path="/heatinstall" element={<AskHeatingInstall />} />
-        <Route path="/basement" element={<AskBasement />} />
-        <Route path="/askBasement1" element={<AskBasement1 />} />
-        <Route path="/askBasement2" element={<AskBasement2 />} />
-        <Route path="/askBasement3" element={<AskBasement3 />} />
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<AskPropertyType />} />
+      <Route path="/time" element={<AskContructionTime />} />
+      <Route path="/noteligible" element={<NotEligibleForRenovation />} />
+      <Route path="/area" element={<AskArea />} />
+      <Route path="/electricbill" element={<AskElectricBill />} />
+      <Route path="/electricbillshare" element={<AskElectricBillShare />} />
+      <Route path="/heatenergy" element={<AskHeatingEnergy />} />
+      <Route path="/oilequipment" element={<AskOilEquipment />} />
+      <Route path="/fuelbill" element={<AskFuelBill />} />
+      <Route path="/woodbill" element={<AskWoodBill />} />
+      <Route path="/coalbill" element={<AskCoalBill />} />
+      <Route path="/gasbill" element={<AskgasBill />} />
+      <Route path="/goals" element={<AskGoals />} />
+      <Route path="/isolate" element={<AskIsolate />} />
+      <Route path="/heatinstall" element={<AskHeatingInstall />} />
+      <Route path="/basement" element={<AskBasement />} />
+      <Route path="/askBasement1" element={<AskBasement1 />} />
+      <Route path="/askBasement2" element={<AskBasement2 />} />
+      <Route path="/askBasement3" element={<AskBasement3 />} />
 
-        <Route path="/garage" element={<AskGarage />} />
-        <Route path="/atticInsulation" element={<AskAtticInsulation />} />
-        <Route path="/atticArea" element={<AskAtticArea />} />
-        <Route path="/basementArea" element={<AskBasementArea />} />
-        <Route path="/wallInsulation" element={<AskwallInsulation />} />
-        <Route path="/wallArea" element={<AskWallArea />} />
-        <Route path="/crawlSpaceArea" element={<AskcrawlSpaceArea />} />
-        <Route path="/electricequipment" element={<AskElectricEquipment />} />
-        <Route path="/gasequipment" element={<AskGasEquipment />} />
-        <Route path="/heatingequipment" element={<AskHeatingEquipment />} />
-        <Route path="/solar" element={<AskSolarOption />} />
-        <Route path="/rooforientation" element={<AskRoofOrientation />} />
-        <Route path="/roofarea" element={<AskRoofArea />} />
-        <Route path="/slopechoice2" element={<AskSlopeChoice2 />} />
-        <Route path="/slopechoice" element={<AskSlopeChoice />} />
-        <Route
-          path="/accomodationaffected"
-          element={<AskAccomodationAffected />}
-        />
-        <Route path="/telephone" element={<AskTelephone />} />
-        <Route
-          path="/accomodationAffectee"
-          element={<AskAccomodationAffectee />}
-        />
-        <Route path="/people" element={<AskPeopleLiving />} />
-        <Route path="/incometax" element={<AskTotalIncomeTax />} />
-        <Route path="/name" element={<AskName />} />
-        {/* <Route path="/eligible" element={<Eligible />} /> */}
-        <Route path="/appointment" element={<TelephoneAppointment />} />
-        <Route path="/workstart" element={<AskWorkStart />} />
-        <Route path="/endscreen" element={<EndScreen />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>,
+      <Route path="/garage" element={<AskGarage />} />
+      <Route path="/atticInsulation" element={<AskAtticInsulation />} />
+      <Route path="/atticArea" element={<AskAtticArea />} />
+      <Route path="/basementArea" element={<AskBasementArea />} />
+      <Route path="/wallInsulation" element={<AskwallInsulation />} />
+      <Route path="/wallArea" element={<AskWallArea />} />
+      <Route path="/crawlSpaceArea" element={<AskcrawlSpaceArea />} />
+      <Route path="/electricequipment" element={<AskElectricEquipment />} />
+      <Route path="/gasequipment" element={<AskGasEquipment />} />
+      <Route path="/heatingequipment" element={<AskHeatingEquipment />} />
+      <Route path="/solar" element={<AskSolarOption />} />
+      <Route path="/rooforientation" element={<AskRoofOrientation />} />
+      <Route path="/roofarea" element={<AskRoofArea />} />
+      <Route path="/slopechoice2" element={<AskSlopeChoice2 />} />
+      <Route path="/slopechoice" element={<AskSlopeChoice />} />
+      <Route
+        path="/accomodationaffected"
+        element={<AskAccomodationAffected />}
+      />
+      <Route path="/telephone" element={<AskTelephone />} />
+      <Route
+        path="/accomodationAffectee"
+        element={<AskAccomodationAffectee />}
+      />
+      <Route path="/people" element={<AskPeopleLiving />} />
+      <Route path="/incometax" element={<AskTotalIncomeTax />} />
+      <Route path="/name" element={<AskName />} />
+      {/* <Route path="/eligible" element={<Eligible />} /> */}
+      <Route path="/appointment" element={<TelephoneAppointment />} />
+      <Route path="/workstart" element={<AskWorkStart />} />
+      <Route path="/endscreen" element={<EndScreen />} />
+    </Routes>
+  </BrowserRouter>
 );

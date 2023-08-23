@@ -1,5 +1,5 @@
-import React from 'react';
-import ContinueButton from './ContinueButton';
+import React from "react";
+import ContinueButton from "./ContinueButton";
 
 const DoubleNumberInput = ({
   state1,
@@ -20,10 +20,7 @@ const DoubleNumberInput = ({
   IDKHandler2,
 }) => {
   return (
-    <form
-      onSubmit={onSubmit}
-      className="flex flex-col items-center lg:w-[60%] mx-auto gap-6"
-    >
+    <div className="flex flex-col items-center lg:w-[60%] mx-auto gap-6">
       <div className="flex flex-col w-full gap-2">
         <p className="text-base font-semibold text-[#1E1D4C] text-left">
           {label1}
@@ -76,7 +73,7 @@ const DoubleNumberInput = ({
       </div>
 
       {!isMobile && <ContinueButton state1={state1} state2={state2} />}
-    </form>
+    </div>
   );
 };
 
